@@ -1,0 +1,49 @@
+name: BudzikApp
+options:
+  bundleIdPrefix: com.budzik
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: pl
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    TARGETED_DEVICE_FAMILY: "1"   # iPhone only
+    DEVELOPMENT_TEAM: ""          # ← set your Apple Developer Team ID here
+
+targets:
+  BudzikApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: BudzikApp
+        excludes:
+          - Resources/Info.plist
+    resources:
+      - BudzikApp/Assets.xcassets
+    info:
+      path: BudzikApp/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: Budzik 100 Kroków
+        CFBundleDevelopmentRegion: pl
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSMotionUsageDescription: Aplikacja liczy Twoje kroki, żeby wyłączyć alarm.
+        NSMicrophoneUsageDescription: Wymagane do odtwarzania dźwięku alarmu w tle.
+        UIBackgroundModes:
+          - audio
+          - processing
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.budzik.BudzikApp
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_USER_SCRIPT_SANDBOXING: "YES"
+    entitlements:
+      path: BudzikApp/Resources/BudzikApp.entitlements
+      properties:
+        aps-environment: development

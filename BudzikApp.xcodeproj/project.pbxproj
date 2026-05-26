@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0801D95BF56573A7AD431C1F /* MorningScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6020386842065E0478A28F7D /* MorningScoreView.swift */; };
+		1BC238F356BFE44E48A1CA8A /* AntiCheatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F268ECF204D8E85DCCA58E49 /* AntiCheatService.swift */; };
+		1EC890C4AFB8608392576CF7 /* MorningScoreCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB56EA752E634CE860BAF422 /* MorningScoreCalculator.swift */; };
+		278F815C74D040EFE0179A59 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972D2232D9E4BDF2790E74EB /* SuccessView.swift */; };
+		28D024E2A358C796A9533D44 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7043259BA46EA77C1FA136C0 /* AnalyticsService.swift */; };
+		36B9999F9139FAD95BDEAC4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26037F39DBDD06AFC2DEA59 /* Assets.xcassets */; };
+		501A0D0FEEFA7AB4196608E4 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650AFC4508E56427EE655DA7 /* HistoryView.swift */; };
+		64725BA015C23873B9B3DC4E /* ActiveAlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17238A151D5C6EEA7E299F7 /* ActiveAlarmViewModel.swift */; };
+		726A8FED3552C452CC6FB2CD /* AlarmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825EA8C50CE2819F223434A4 /* AlarmService.swift */; };
+		9A2F09080C258C342E0FD4EA /* WakeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D7BE938DE866152AA4C7C /* WakeRecord.swift */; };
+		9BF2ACCB60B57BE72C928B5F /* AlarmViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1591E2E84DF83501EF5DA4 /* AlarmViewModel.swift */; };
+		AAAA1111AAAA1111AAAA1111 /* alarm.caf in Resources */ = {isa = PBXBuildFile; fileRef = BBBB2222BBBB2222BBBB2222 /* alarm.caf */; };
+		CCCC3333CCCC3333CCCC3333 /* alarm_loop.caf in Resources */ = {isa = PBXBuildFile; fileRef = DDDD4444DDDD4444DDDD4444 /* alarm_loop.caf */; };
+		AFC688A7EA6CC47BF4B7E327 /* StepCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4A38D2DEB318447A4D97A /* StepCounterView.swift */; };
+		BCDF17A3EDFFB88F4635900E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB19CFBBF95A028A0A9E10E7 /* SettingsView.swift */; };
+		C42D9F1EA8D896DC29CC5D89 /* AlarmSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD11B415792C5BA1B53E6D4 /* AlarmSetupView.swift */; };
+		C45658224C5B91535DDCD003 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94390D7DA15D27ADDFA22EC /* Constants.swift */; };
+		C5967C3BEDD975B26539C110 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D11817BBFC58A08A2BF94C6 /* AudioService.swift */; };
+		C7CAB15D1378DC1527A0AED3 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F301239B4F36BE5D8903B7C /* HistoryViewModel.swift */; };
+		D5E54036A003BFB2A5BB4C37 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2192FA4BBAC96F67A0401C /* Extensions.swift */; };
+		D98ADA72FC875D854824E2F4 /* ActiveAlarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB246D996685B2D4579DB4A5 /* ActiveAlarmView.swift */; };
+		E0753F523BEC1FC29FF3BF8B /* PedometerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0726718D69ACA6889594DD /* PedometerService.swift */; };
+		E21E0D5951DC0DF815AD91B2 /* BudzikApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546238F26B023ADC49681EF2 /* BudzikApp.swift */; };
+		EA0F5A340BAA8FFAD7F1874D /* AlarmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535E3D8BCC85D5B140309875 /* AlarmModel.swift */; };
+		F451D517A16B3ABFAFF98EB6 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CD78AA5AA27ECCD4C47CFC /* RootView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D11817BBFC58A08A2BF94C6 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
+		3B2192FA4BBAC96F67A0401C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		402D7BE938DE866152AA4C7C /* WakeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WakeRecord.swift; sourceTree = "<group>"; };
+		535E3D8BCC85D5B140309875 /* AlarmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmModel.swift; sourceTree = "<group>"; };
+		546238F26B023ADC49681EF2 /* BudzikApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudzikApp.swift; sourceTree = "<group>"; };
+		5BD11B415792C5BA1B53E6D4 /* AlarmSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSetupView.swift; sourceTree = "<group>"; };
+		6020386842065E0478A28F7D /* MorningScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningScoreView.swift; sourceTree = "<group>"; };
+		650AFC4508E56427EE655DA7 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		7043259BA46EA77C1FA136C0 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
+		77CD78AA5AA27ECCD4C47CFC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		825EA8C50CE2819F223434A4 /* AlarmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmService.swift; sourceTree = "<group>"; };
+		8903B51F963C76CA7FEED92F /* BudzikApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudzikApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F301239B4F36BE5D8903B7C /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		94A4A38D2DEB318447A4D97A /* StepCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCounterView.swift; sourceTree = "<group>"; };
+		972D2232D9E4BDF2790E74EB /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		AB19CFBBF95A028A0A9E10E7 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B26037F39DBDD06AFC2DEA59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBBB2222BBBB2222BBBB2222 /* alarm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm.caf; sourceTree = "<group>"; };
+		DDDD4444DDDD4444DDDD4444 /* alarm_loop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alarm_loop.caf; sourceTree = "<group>"; };
+		BD0726718D69ACA6889594DD /* PedometerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PedometerService.swift; sourceTree = "<group>"; };
+		C17238A151D5C6EEA7E299F7 /* ActiveAlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlarmViewModel.swift; sourceTree = "<group>"; };
+		CB246D996685B2D4579DB4A5 /* ActiveAlarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveAlarmView.swift; sourceTree = "<group>"; };
+		E63F6AF02949EC908866BAAE /* BudzikApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BudzikApp.entitlements; sourceTree = "<group>"; };
+		E94390D7DA15D27ADDFA22EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EB56EA752E634CE860BAF422 /* MorningScoreCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningScoreCalculator.swift; sourceTree = "<group>"; };
+		F268ECF204D8E85DCCA58E49 /* AntiCheatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntiCheatService.swift; sourceTree = "<group>"; };
+		FE1591E2E84DF83501EF5DA4 /* AlarmViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		00F0B7766DB09D4C84A9C6A7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C17238A151D5C6EEA7E299F7 /* ActiveAlarmViewModel.swift */,
+				FE1591E2E84DF83501EF5DA4 /* AlarmViewModel.swift */,
+				8F301239B4F36BE5D8903B7C /* HistoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		13DF7879642999044C7A7174 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BBBB2222BBBB2222BBBB2222 /* alarm.caf */,
+				DDDD4444DDDD4444DDDD4444 /* alarm_loop.caf */,
+				E63F6AF02949EC908866BAAE /* BudzikApp.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3EF0EF1946B731CC71D0138D /* BudzikApp */ = {
+			isa = PBXGroup;
+			children = (
+				B26037F39DBDD06AFC2DEA59 /* Assets.xcassets */,
+				546238F26B023ADC49681EF2 /* BudzikApp.swift */,
+				5EE7AB08F8E91209321DE797 /* Models */,
+				13DF7879642999044C7A7174 /* Resources */,
+				74AABB33D0BA7156A8F16B7D /* Services */,
+				4118E7305A99980B622576FB /* Utilities */,
+				00F0B7766DB09D4C84A9C6A7 /* ViewModels */,
+				9ABC22CF7BDB186C21DC55E0 /* Views */,
+			);
+			path = BudzikApp;
+			sourceTree = "<group>";
+		};
+		4118E7305A99980B622576FB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E94390D7DA15D27ADDFA22EC /* Constants.swift */,
+				3B2192FA4BBAC96F67A0401C /* Extensions.swift */,
+				EB56EA752E634CE860BAF422 /* MorningScoreCalculator.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5EE7AB08F8E91209321DE797 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				535E3D8BCC85D5B140309875 /* AlarmModel.swift */,
+				402D7BE938DE866152AA4C7C /* WakeRecord.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		74AABB33D0BA7156A8F16B7D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				825EA8C50CE2819F223434A4 /* AlarmService.swift */,
+				7043259BA46EA77C1FA136C0 /* AnalyticsService.swift */,
+				F268ECF204D8E85DCCA58E49 /* AntiCheatService.swift */,
+				1D11817BBFC58A08A2BF94C6 /* AudioService.swift */,
+				BD0726718D69ACA6889594DD /* PedometerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9ABC22CF7BDB186C21DC55E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB246D996685B2D4579DB4A5 /* ActiveAlarmView.swift */,
+				5BD11B415792C5BA1B53E6D4 /* AlarmSetupView.swift */,
+				650AFC4508E56427EE655DA7 /* HistoryView.swift */,
+				6020386842065E0478A28F7D /* MorningScoreView.swift */,
+				77CD78AA5AA27ECCD4C47CFC /* RootView.swift */,
+				AB19CFBBF95A028A0A9E10E7 /* SettingsView.swift */,
+				94A4A38D2DEB318447A4D97A /* StepCounterView.swift */,
+				972D2232D9E4BDF2790E74EB /* SuccessView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A9B143E97240565E5B96A5DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8903B51F963C76CA7FEED92F /* BudzikApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABC6C6BA4311DD4260AE0434 = {
+			isa = PBXGroup;
+			children = (
+				3EF0EF1946B731CC71D0138D /* BudzikApp */,
+				A9B143E97240565E5B96A5DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DE3EFB28DFE065BD0228DB7 /* BudzikApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B973D9E13EB059F729AE271 /* Build configuration list for PBXNativeTarget "BudzikApp" */;
+			buildPhases = (
+				5BFAE29FDF4D09DEDCB3BACB /* Sources */,
+				ECA8D28BFFAFA64A5C310BEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BudzikApp;
+			packageProductDependencies = (
+			);
+			productName = BudzikApp;
+			productReference = 8903B51F963C76CA7FEED92F /* BudzikApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B4629587AA08839DD018F48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2650;
+			};
+			buildConfigurationList = 1C11575B8A0E181DD8F1A329 /* Build configuration list for PBXProject "BudzikApp" */;
+			developmentRegion = pl;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				pl,
+			);
+			mainGroup = ABC6C6BA4311DD4260AE0434;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A9B143E97240565E5B96A5DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DE3EFB28DFE065BD0228DB7 /* BudzikApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECA8D28BFFAFA64A5C310BEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36B9999F9139FAD95BDEAC4F /* Assets.xcassets in Resources */,
+				AAAA1111AAAA1111AAAA1111 /* alarm.caf in Resources */,
+				CCCC3333CCCC3333CCCC3333 /* alarm_loop.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BFAE29FDF4D09DEDCB3BACB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D98ADA72FC875D854824E2F4 /* ActiveAlarmView.swift in Sources */,
+				64725BA015C23873B9B3DC4E /* ActiveAlarmViewModel.swift in Sources */,
+				EA0F5A340BAA8FFAD7F1874D /* AlarmModel.swift in Sources */,
+				726A8FED3552C452CC6FB2CD /* AlarmService.swift in Sources */,
+				C42D9F1EA8D896DC29CC5D89 /* AlarmSetupView.swift in Sources */,
+				9BF2ACCB60B57BE72C928B5F /* AlarmViewModel.swift in Sources */,
+				28D024E2A358C796A9533D44 /* AnalyticsService.swift in Sources */,
+				1BC238F356BFE44E48A1CA8A /* AntiCheatService.swift in Sources */,
+				C5967C3BEDD975B26539C110 /* AudioService.swift in Sources */,
+				E21E0D5951DC0DF815AD91B2 /* BudzikApp.swift in Sources */,
+				C45658224C5B91535DDCD003 /* Constants.swift in Sources */,
+				D5E54036A003BFB2A5BB4C37 /* Extensions.swift in Sources */,
+				501A0D0FEEFA7AB4196608E4 /* HistoryView.swift in Sources */,
+				C7CAB15D1378DC1527A0AED3 /* HistoryViewModel.swift in Sources */,
+				1EC890C4AFB8608392576CF7 /* MorningScoreCalculator.swift in Sources */,
+				0801D95BF56573A7AD431C1F /* MorningScoreView.swift in Sources */,
+				E0753F523BEC1FC29FF3BF8B /* PedometerService.swift in Sources */,
+				F451D517A16B3ABFAFF98EB6 /* RootView.swift in Sources */,
+				BCDF17A3EDFFB88F4635900E /* SettingsView.swift in Sources */,
+				AFC688A7EA6CC47BF4B7E327 /* StepCounterView.swift in Sources */,
+				278F815C74D040EFE0179A59 /* SuccessView.swift in Sources */,
+				9A2F09080C258C342E0FD4EA /* WakeRecord.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5257BE25C3BD402E87E3C631 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BudzikApp/Resources/BudzikApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_FILE = BudzikApp/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.budzik.BudzikApp;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5CE4FB3F5C0A447F97332312 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 883Q288N5Q;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		960095E4F2C240C35B12057B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 883Q288N5Q;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		AF36DFEE33837DD326CCB4A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BudzikApp/Resources/BudzikApp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				INFOPLIST_FILE = BudzikApp/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.budzik.BudzikApp;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C11575B8A0E181DD8F1A329 /* Build configuration list for PBXProject "BudzikApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				960095E4F2C240C35B12057B /* Debug */,
+				5CE4FB3F5C0A447F97332312 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6B973D9E13EB059F729AE271 /* Build configuration list for PBXNativeTarget "BudzikApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF36DFEE33837DD326CCB4A7 /* Debug */,
+				5257BE25C3BD402E87E3C631 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B4629587AA08839DD018F48 /* Project object */;
+}
