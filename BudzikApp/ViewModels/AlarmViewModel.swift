@@ -7,6 +7,7 @@ import Observation
 final class AlarmViewModel {
     private var modelContext: ModelContext
     private let alarmService = AlarmService.shared
+    private let audioService = AudioService.shared
 
     init(modelContext: ModelContext) {
         self.modelContext = modelContext
@@ -25,6 +26,9 @@ final class AlarmViewModel {
             "minute": alarm.minute,
             "repeatDays": alarm.repeatDays
         ])
+        if alarm.isActive {
+            audioService.startSilentBackgroundAudio()
+        }
         Task { await schedule(alarm) }
     }
 
@@ -45,11 +49,17 @@ final class AlarmViewModel {
         } catch {
             print("[AlarmViewModel] Delete failed: \(error)")
         }
+        stopSilentIfNoActiveAlarms()
     }
 
     func toggle(_ alarm: AlarmModel) {
         alarm.isActive.toggle()
         update(alarm)
+        if alarm.isActive {
+            audioService.startSilentBackgroundAudio()
+        } else {
+            stopSilentIfNoActiveAlarms()
+        }
     }
 
     private func schedule(_ alarm: AlarmModel) async {
@@ -65,6 +75,17 @@ final class AlarmViewModel {
         guard let alarms = try? modelContext.fetch(descriptor) else { return }
         for alarm in alarms {
             await schedule(alarm)
+        }
+        if !alarms.isEmpty {
+            audioService.startSilentBackgroundAudio()
+        }
+    }
+
+    private func stopSilentIfNoActiveAlarms() {
+        let descriptor = FetchDescriptor<AlarmModel>(predicate: #Predicate { $0.isActive })
+        let remaining = (try? modelContext.fetchCount(descriptor)) ?? 0
+        if remaining == 0 {
+            audioService.stopSilentBackgroundAudio()
         }
     }
 }

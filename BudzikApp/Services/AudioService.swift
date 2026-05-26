@@ -13,6 +13,12 @@ final class AudioService {
     private var isPlaying: Bool = false
     private var volumeObservation: NSKeyValueObservation?
 
+    /// Near-silent player kept alive while an alarm is scheduled. Holds the
+    /// `audio` background mode so `UNUserNotificationCenter` + `CMPedometer`
+    /// continue to fire reliably on a locked device.
+    private var silentPlayer: AVAudioPlayer?
+    private var isPlayingSilent: Bool = false
+
     private init() {
         NotificationCenter.default.addObserver(
             self,
@@ -70,7 +76,59 @@ final class AudioService {
         fallbackTimer?.invalidate()
         fallbackTimer = nil
         isPlaying = false
-        try? AVAudioSession.sharedInstance().setActive(false, options: [.notifyOthersOnDeactivation])
+        if !isPlayingSilent {
+            try? AVAudioSession.sharedInstance().setActive(false, options: [.notifyOthersOnDeactivation])
+        }
+    }
+
+    // MARK: - Silent background keep-alive
+
+    /// Starts a near-silent looping playback so iOS keeps the app's audio
+    /// session active in the background. Uses `.mixWithOthers` so the user's
+    /// music / podcasts continue uninterrupted while an alarm is pending.
+    func startSilentBackgroundAudio() {
+        guard !isPlayingSilent else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(
+                .playback,
+                mode: .default,
+                options: [.mixWithOthers]
+            )
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print("[AudioService] Failed to configure silent session: \(error)")
+            return
+        }
+
+        guard let url = Bundle.main.url(forResource: "alarm", withExtension: "caf")
+            ?? Bundle.main.url(forResource: "alarm", withExtension: "wav")
+            ?? Bundle.main.url(forResource: "alarm", withExtension: "mp3")
+        else {
+            print("[AudioService] Silent keep-alive: no alarm asset found")
+            return
+        }
+
+        do {
+            let p = try AVAudioPlayer(contentsOf: url)
+            p.numberOfLoops = -1
+            p.volume = 0.01
+            p.prepareToPlay()
+            p.play()
+            silentPlayer = p
+            isPlayingSilent = true
+        } catch {
+            print("[AudioService] Silent player failed: \(error)")
+        }
+    }
+
+    func stopSilentBackgroundAudio() {
+        silentPlayer?.stop()
+        silentPlayer = nil
+        isPlayingSilent = false
+        if !isPlaying {
+            try? AVAudioSession.sharedInstance().setActive(false, options: [.notifyOthersOnDeactivation])
+        }
     }
 
     // MARK: - Volume observation

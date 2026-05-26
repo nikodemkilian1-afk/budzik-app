@@ -59,6 +59,9 @@ final class ActiveAlarmViewModel {
         // keep firing every ~28s for the duration of the chain.
         AlarmService.shared.cancelAlarm(alarm)
 
+        // Release the keep-alive loop so the loud alarm can take over the
+        // audio session under the non-mixing `.playback` category.
+        audio.stopSilentBackgroundAudio()
         audio.playAlarm()
         AnalyticsService.log(.alarmStarted, properties: ["alarmId": alarm.id.uuidString])
 
